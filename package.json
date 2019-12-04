@@ -32,7 +32,7 @@
   },
   "scripts": {
     "pretest": "NODE_ENV=test sequelize db:migrate",
-    "test": "NODE_ENV=test jest codecov",
+    "test": "NODE_ENV=test jest",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js --ignore __tests__"
