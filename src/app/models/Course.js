@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     image: DataTypes.BLOB,
     body: DataTypes.STRING,
-    categories_id: DataTypes.INTEGER
+    category_id: DataTypes.INTEGER
   }, {});
   Course.associate = function(models) {
     Course.belongsTo(models.Category);
