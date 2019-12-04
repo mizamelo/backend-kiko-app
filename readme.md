@@ -1,6 +1,7 @@
 ## La Horta - __API__
 
 [![Build Status](https://travis-ci.org/mizamelo/backend-kiko-app.svg?branch=master)](https://travis-ci.org/mizamelo/backend-kiko-app)
+[![codecov](https://codecov.io/gh/mizamelo/backend-kiko-app/branch/master/graph/badge.svg)](https://codecov.io/gh/mizamelo/backend-kiko-app)
 
 Instalando dependencias com Yarn
 

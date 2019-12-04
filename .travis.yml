@@ -12,7 +12,9 @@ install:
 
 script:
   - npm test
-  - codecov
 
 notifications:
   email: false
+
+after_success:
+  - codecov
