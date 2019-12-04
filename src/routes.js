@@ -12,5 +12,6 @@ routes.post('/sessions/register', SessionsController.register)
 // Authenticate's routes only
 routes.use(authMiddleware);
 routes.get('/courses', CoursesController.list);
+routes.get('/courses/:id', CoursesController.listOne);
 
 module.exports = routes;
