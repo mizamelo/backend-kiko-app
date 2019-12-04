@@ -1,0 +1,11 @@
+node_modules/
+__tests__/database.sqlite
+__tests__/coverage
+.env
+docker/
+docker-compose.yml
+heroku.yml
+.vscode/
+
+# Errors
+yarn-error.log

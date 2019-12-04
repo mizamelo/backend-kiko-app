@@ -1,0 +1,39 @@
+{
+  "name": "eagle",
+  "version": "1.0.0",
+  "description": "Api Eagle",
+  "main": "index.js",
+  "author": "Mizael Melo",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^0.1.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "nexmo": "^2.4.2",
+    "nodemailer": "^5.1.1",
+    "pg": "^7.9.0",
+    "sequelize": "^5.1.0",
+    "sequelize-paginate": "^1.1.6",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.2.0",
+    "factory-girl": "^5.0.4",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__"
+  }
+}
