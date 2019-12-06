@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/mizamelo/backend-kiko-app.svg?branch=master)](https://travis-ci.org/mizamelo/backend-kiko-app)
 [![codecov](https://codecov.io/gh/mizamelo/backend-kiko-app/branch/master/graph/badge.svg)](https://codecov.io/gh/mizamelo/backend-kiko-app)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![DeepScan grade](https://deepscan.io/api/teams/6376/projects/8373/branches/98301/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=6376&pid=8373&bid=98301)
 
 Instalando dependencias com Yarn
 
