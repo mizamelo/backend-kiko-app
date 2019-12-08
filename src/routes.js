@@ -13,5 +13,6 @@ routes.post('/sessions/register', SessionsController.register)
 routes.use(authMiddleware);
 routes.get('/courses', CoursesController.list);
 routes.get('/courses/:id', CoursesController.listOne);
+routes.get('/taxas', CoursesController.taxa)
 
 module.exports = routes;

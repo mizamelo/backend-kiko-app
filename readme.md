@@ -1,4 +1,5 @@
-## KIKO - __API__
+<div align="center">
+<h2>KIKO - API</h2>
 
 [![Build Status](https://travis-ci.org/mizamelo/backend-kiko-app.svg?branch=master)](https://travis-ci.org/mizamelo/backend-kiko-app)
 [![codecov](https://codecov.io/gh/mizamelo/backend-kiko-app/branch/master/graph/badge.svg)](https://codecov.io/gh/mizamelo/backend-kiko-app)
@@ -7,6 +8,7 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/mizamelo/backend-kiko-app.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mizamelo/backend-kiko-app/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/mizamelo/backend-kiko-app.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mizamelo/backend-kiko-app/context:javascript)
 
+</div>
 Instalando dependencias com Yarn
 
 ```bash
