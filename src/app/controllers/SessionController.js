@@ -20,7 +20,8 @@ class SessionController {
       }
 
       return res.json({
-        token: await user.generateToken()
+        token: await user.generateToken(),
+        id: user.id
       });
     } catch (err) {
       res.status(401).json({ msg: err });
@@ -46,6 +47,22 @@ class SessionController {
       });
     } catch (error) {
       res.status(401).json({ msg: error });
+    }
+  }
+
+  async me(req, res) {
+    const { id } = req.body
+
+    try {
+      if (!id) return res.status(401).json({ msg: "Campo id é obrigatório" })
+
+      const user = await User.findOne({ where: { id } })
+
+      if (!user) return res.status(401).json({ msg: "Usuário não encontrado" })
+
+      return res.status(200).json({ user }) 
+    } catch (err) {
+      res.status(401).json({ msg: err });
     }
   }
 }
