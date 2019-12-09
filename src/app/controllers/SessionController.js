@@ -43,7 +43,8 @@ class SessionController {
       });
 
       return res.json({
-        token: await user.generateToken()
+        token: await user.generateToken(),
+        id: user.id
       });
     } catch (error) {
       res.status(401).json({ msg: error });
