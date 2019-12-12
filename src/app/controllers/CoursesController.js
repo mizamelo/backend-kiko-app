@@ -24,15 +24,15 @@ class CoursesController {
     }
   }
 
-  async taxa(req, res) {
-    try {
-      const response = await axios.get('http://api.hgbrasil.com/finance/taxes?key=202dcdbd');
+  // async taxa(req, res) {
+  //   try {
+  //     const response = await axios.get('http://api.hgbrasil.com/finance/taxes?key=202dcdbd');
 
-      return res.status(200).json({ data: response.data });
-    } catch (err) {
-      res.status(401).json({ msg: err });
-    }
-  }
+  //     return res.status(200).json({ data: response.data });
+  //   } catch (err) {
+  //     res.status(401).json({ msg: err });
+  //   }
+  // }
 }
 
 module.exports = new CoursesController()

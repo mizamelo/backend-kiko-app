@@ -165,4 +165,53 @@ describe("Register", () => {
 
     expect(response.status).toBe(200);
   })
+
+  it("Usuário não pode pegar suas informações sem um id", async () => {
+   
+    const response = await request(app)
+      .post("/sessions/me")
+    
+    expect(response.status).toBe(401);
+  })
+
+  it("Usuário não pode pegar suas informações sem um token", async () => {
+    const user = await factory.create("User");
+    
+    const register = await request(app)
+      .post("/sessions/register")
+      .send({
+        name: user.name,
+        email: 'admin@gmail.com',
+        password: user.password,
+      });
+
+    const response = await request(app)
+      .post("/sessions/me")
+      .send({
+        id: register.body.id
+      });
+    
+    expect(response.status).toBe(401);
+  })
+
+  it("Usuário pode pegar suas informações", async () => {
+    const user = await factory.create("User");
+    
+    const register = await request(app)
+      .post("/sessions/register")
+      .send({
+        name: user.name,
+        email: 'admin@gmail.com',
+        password: user.password,
+      });
+
+    const response = await request(app)
+      .post("/sessions/me")
+      .send({
+        id: register.body.id
+      })
+      .set("Authorization", `Bearer ${user.generateToken()}`);
+    
+    expect(response.status).toBe(200);
+  })
 });
