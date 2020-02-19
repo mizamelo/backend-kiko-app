@@ -22,7 +22,7 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.5",
     "factory-girl": "^5.0.4",
     "faker": "^4.1.0",
     "jest": "^24.5.0",
